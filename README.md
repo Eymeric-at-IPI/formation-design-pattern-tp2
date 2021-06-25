@@ -11,6 +11,8 @@
 
 ### Exercice MaLinkedList Iterator : 
 
-Word todo
+Simple
 
 ### Exercice ArbreBinaire Iterator : 
+
+Realy mindy

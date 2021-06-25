@@ -1,64 +1,60 @@
 package _3_iterator.arbre;
 
+import _3_iterator.Iterator;
+
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Application {
+
     public static void main(String[] args) {
-        Arbre a1 = new Arbre();
-        a1.setValeur("a1");
+        Arbre root = initTree();
 
-        Arbre a2 = new Arbre();
-        a2.setValeur("a2");
-
-        Arbre a3 = new Arbre();
-        a3.setValeur("a3");
-
-        Arbre a4 = new Arbre();
-        a4.setValeur("a4");
-
-        a1.setSousArbreGauche(a2);
-        a1.setSousArbreDroit(a3);
-
-        a3.setSousArbreDroit(a4);
-
-        parcourir(a1);
-
-        for (Iterator<Arbre> iterator = a1.iterator(); iterator.hasNext(); ) {
-            Arbre arbre = iterator.next();
-            System.out.println(arbre.getValeur());
-        }
-
-        for (Arbre a : a1) {
-            System.out.println(a.getValeur());
+        Iterator iterator = root.createIterator();
+        while(iterator.hasNext()) {
+            System.out.println(iterator.getNext());
         }
     }
 
-    private static void parcourirRecurrssif(Arbre a) {
-        System.out.println(a.getValeur());
+    private static Arbre initTree() {
+        /*
+                a1
+               /  \
+              a2   a3
+             / \     \
+            a4  a5    a6
+                 \
+                  a7
+         */
 
-        if (a.getSousArbreGauche() != null)
-            parcourir(a.getSousArbreGauche());
+        Arbre leave7 = new Arbre();
+        leave7.setValeur("leave7");
 
-        if (a.getSousArbreDroit() != null)
-            parcourir(a.getSousArbreDroit());
+        Arbre leave5 = new Arbre();
+        leave5.setValeur("leave5");
+        leave5.setSousArbreDroit(leave7);
+
+        Arbre leave4 = new Arbre();
+        leave4.setValeur("leave4");
+
+        Arbre leave2 = new Arbre();
+        leave2.setValeur("leave2");
+        leave2.setSousArbreGauche(leave4);
+        leave2.setSousArbreDroit(leave5);
+
+        Arbre leave6 = new Arbre();
+        leave6.setValeur("leave6");
+
+        Arbre leave3 = new Arbre();
+        leave3.setValeur("leave3");
+        leave3.setSousArbreDroit(leave6);
+
+        Arbre root = new Arbre();
+        root.setValeur("root");
+        root.setSousArbreGauche(leave2);
+        root.setSousArbreDroit(leave3);
+
+        return root;
     }
 
-
-    private static void parcourir(Arbre arbre) {
-        List<Arbre> arbres = new ArrayList<>();
-        arbres.add(arbre);
-
-        while (!arbres.isEmpty()) {
-            Arbre a = arbres.remove(0);
-            System.out.println(a.getValeur());
-
-            if (a.getSousArbreGauche() != null)
-                arbres.add(a.getSousArbreGauche());
-
-            if (a.getSousArbreDroit() != null)
-                arbres.add(a.getSousArbreDroit());
-        }
-    }
 }
