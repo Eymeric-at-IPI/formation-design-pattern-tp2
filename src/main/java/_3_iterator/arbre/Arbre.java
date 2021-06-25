@@ -1,8 +1,10 @@
 package _3_iterator.arbre;
 
-import java.util.Iterator;
 
-public class Arbre implements Iterable<Arbre> {
+import _3_iterator.Iterable;
+import _3_iterator.Iterator;
+
+public class Arbre implements Iterable {
 
     private String valeur;
     private Arbre sousArbreGauche;
@@ -32,7 +34,8 @@ public class Arbre implements Iterable<Arbre> {
         this.sousArbreDroit = sousArbreDroit;
     }
 
-    public Iterator<Arbre> iterator() {
+    @Override
+    public Iterator createIterator() {
         return new ArbreIterator(this);
     }
 }

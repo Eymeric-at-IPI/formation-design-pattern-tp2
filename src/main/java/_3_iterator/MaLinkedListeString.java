@@ -1,6 +1,6 @@
 package _3_iterator;
 
-public class MaLinkedListString implements Iterable {
+public class MaLinkedListeString implements Iterable {
 
     private Cellule premiere;
     private Cellule derniere;
@@ -38,6 +38,6 @@ public class MaLinkedListString implements Iterable {
 
     @Override
     public Iterator createIterator() {
-        return new MaLinkedListStringIterator(this);
+        return new MaLinkedListeStringIterator(this);
     }
 }

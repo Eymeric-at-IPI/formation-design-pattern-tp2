@@ -7,9 +7,7 @@ import _6_absctractfactory.window.exercice.factories.IScreen;
 public class WebScreen implements IScreen {
 
     @Override
-    public void add(IComponent component) {
-
-    }
+    public void add(IComponent component) {}
 
     @Override
     public String speak() {

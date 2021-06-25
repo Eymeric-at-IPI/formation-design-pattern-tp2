@@ -1,12 +1,12 @@
 package _3_iterator;
 
-public class MaArrayListStringIterator implements Iterator, java.util.Iterator<String> {
+public class MaArrayListeStringIterator implements Iterator, java.util.Iterator<String> {
 
     private MaArrayListeString maListeString;
 
     private int position = 0;
 
-    public MaArrayListStringIterator(MaArrayListeString maListeString) {
+    public MaArrayListeStringIterator(MaArrayListeString maListeString) {
         this.maListeString = maListeString;
     }
 

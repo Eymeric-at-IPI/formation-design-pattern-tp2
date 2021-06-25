@@ -1,8 +1,8 @@
 package _3_iterator.arbre;
 
-import java.util.Iterator;
+import _3_iterator.Iterator;
 
-public class ArbreIterator implements Iterator<Arbre> {
+public class ArbreIterator implements Iterator {
 
     private Arbre arbre;
 
@@ -11,14 +11,23 @@ public class ArbreIterator implements Iterator<Arbre> {
     }
 
     @Override
+    public String getNext() {
+        return null;
+    }
+
+    @Override
     public boolean hasNext() {
         //TODO
         return false;
     }
-
-    @Override
-    public Arbre next() {
-        //TODO
-        return null;
-    }
 }
+
+
+/*
+
+TODO :
+
+comment passer au suivant ?
+c'est quoi le suivant ?
+
+ */

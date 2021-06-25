@@ -3,7 +3,7 @@ package _3_iterator;
 public class TestPerf {
 
     public static void main(String[] args) {
-        MaLinkedListString list = new MaLinkedListString();
+        MaLinkedListeString list = new MaLinkedListeString();
         for (int i = 0; i < 1_000_000; i++) {
             list.add("A");
         }

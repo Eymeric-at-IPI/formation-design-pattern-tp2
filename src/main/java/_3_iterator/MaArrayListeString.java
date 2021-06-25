@@ -27,12 +27,12 @@ public class MaArrayListeString implements Iterable, java.lang.Iterable<String> 
 
     @Override
     public Iterator createIterator() {
-        return new MaArrayListStringIterator(this);
+        return new MaArrayListeStringIterator(this);
     }
 
     @Override
     public java.util.Iterator<String> iterator() {
-        return new MaArrayListStringIterator(this);
+        return new MaArrayListeStringIterator(this);
     }
 
 }
