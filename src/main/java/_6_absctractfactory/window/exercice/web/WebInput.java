@@ -1,4 +1,7 @@
 package _6_absctractfactory.window.exercice.web;
 
-public class WebInput implements WebComponent {
+import _6_absctractfactory.window.exercice.factories.IInput;
+
+public class WebInput implements IInput, WebComponent {
+
 }

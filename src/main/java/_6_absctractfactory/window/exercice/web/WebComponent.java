@@ -1,4 +1,6 @@
 package _6_absctractfactory.window.exercice.web;
 
-public interface WebComponent {
+import _6_absctractfactory.window.exercice.factories.IComponent;
+
+public interface WebComponent extends IComponent {
 }

@@ -1,4 +1,8 @@
 package _6_absctractfactory.window.exercice.microsoftwindow;
 
-public class MicrosoftWindowInput implements MicrosoftWindowComponent {
+import _6_absctractfactory.window.exercice.factories.IInput;
+import _6_absctractfactory.window.exercice.web.WebInput;
+
+public class MicrosoftWindowInput implements IInput, MicrosoftWindowComponent {
+
 }

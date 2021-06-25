@@ -1,4 +1,6 @@
 package _6_absctractfactory.window.exercice.web;
 
-public class WebButton implements WebComponent {
+import _6_absctractfactory.window.exercice.factories.IButton;
+
+public class WebButton implements IButton, WebComponent {
 }
