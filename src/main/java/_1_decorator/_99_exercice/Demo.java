@@ -6,12 +6,12 @@ public class Demo {
         // exemple de données à sauvegarder encrypter et compressé
         String salaryRecords = "Name,Salary\nJohn Smith,100000\nSteven Jobs,912000";
 
-        FileDataSource fileDataSource = new FileDataSource("OutputDemo.txt");
+        DataSource dataSource = new FileDataSource("OutputDemo.txt");
+        dataSource = new CompressorDecorator(dataSource);
+        dataSource = new EncryptorDecorator(dataSource);
 
-        Encryptor encryptor = new Encryptor();
-        Compressor compressor = new Compressor();
-        String encrypted = encryptor.encode(salaryRecords);
-        String encryptedAndCompressed = compressor.compress(encrypted);
-        fileDataSource.writeData(encryptedAndCompressed);
+        DataSource dataSource2 = new SqlDataSource();
+        dataSource2 = new CompressorDecorator(dataSource2);
+        dataSource2 = new EncryptorDecorator(dataSource2);
     }
 }
